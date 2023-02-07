@@ -6,10 +6,8 @@ import java.awt.*;
 
 public class Grid_panels {
     JFrame Grid_panels_Frame;
-    JPanel panelOne, panelTwo;
-    JLabel EmailJLabel;
     JPanel panelOne, panelTwo, panelThree, panelFour;
-
+    JLabel EmailJLabel;
     public Grid_panels() {
         this.prepare_Grid_panels_layout();
     }
@@ -21,6 +19,9 @@ public class Grid_panels {
         Grid_panels_Frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         Grid_panels_Frame.setLayout(new GridLayout(1, 2));
         Grid_panels_Frame.add(this.prepare_panelOne());
+        Grid_panels_Frame.add(this.prepare_panelTwo());
+        Grid_panels_Frame.add(this.prepare_panelThree());
+        Grid_panels_Frame.add(this.prepare_panelFour());
         Grid_panels_Frame.setVisible(true);
 
     }
@@ -30,7 +31,9 @@ public class Grid_panels {
         Border panelOneBorder = BorderFactory.createTitledBorder("panel One");
 
         panelOne.setLayout(null);
-
+        EmailJLabel = new JLabel("Email Address");
+        EmailJLabel.setBounds(50, 50, 100,25);
+        EmailJLabel.setFont(new Font("calibri", Font.PLAIN, 15));
         panelOne.setBorder(panelOneBorder);
         return panelOne;
     }
@@ -41,6 +44,14 @@ public class Grid_panels {
         return panelTwo;
 
     }
+    public final JLabel prepare_EmailJLabel(){
+        EmailJLabel = new JLabel("Email Address");
+        EmailJLabel.setBounds(50, 50, 250,40);
+        EmailJLabel.setFont(new Font("Calibri", Font.PLAIN, 15));
+
+        return EmailJLabel;
+    }
+
     public final JPanel prepare_panelThree(){
         panelThree = new JPanel();
         Border panelThreeBorder = BorderFactory.createTitledBorder("panel Three");
@@ -48,6 +59,7 @@ public class Grid_panels {
         return panelThree;
     }
     public final JPanel prepare_panelFour(){
+        panelFour = new JPanel();
         Border panelFourBorder = BorderFactory.createTitledBorder("panel Four");
         panelFour.setBorder(panelFourBorder);
         return panelFour;
