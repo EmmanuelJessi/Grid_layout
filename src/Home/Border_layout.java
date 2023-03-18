@@ -11,7 +11,7 @@ public class Border_layout {
         JButton ButtonTwo = new JButton("Button Two");
         JButton ButtonThree = new JButton("Button Three");
         JButton ButtonFour = new JButton("Button Four");
-        JButton ButtonFive = new JButton("Button");
+        JButton ButtonFive = new JButton("Center");
 
         Border_JFrame.add(ButtonOne, BorderLayout.NORTH);
         Border_JFrame.add(ButtonTwo, BorderLayout.SOUTH);
